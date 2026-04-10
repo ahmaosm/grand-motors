@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Cars",
+    "about": "About",
+    "theme": "Theme"
+  },
+  "hero": {
+    "title": "Drive what others dream of",
+    "subtitle": "Premium cars delivered in 2 hours. No deposit.",
+    "catalog": "View Cars",
+    "booking": "WhatsApp"
+  },
+  "home": {
+    "ourCars": "Our Cars",
+    "ourCarsDesc": "Discover our collection of 20 exclusive vehicles",
+    "more": "View All",
+    "whyUs": "Why Choose Us",
+    "faq": "Frequently Asked Questions"
+  },
+  "catalog": {
+    "title": "Car Catalog",
+    "search": "Search by name...",
+    "all": "All",
+    "supercar": "Supercars",
+    "sedan": "Luxury Sedans",
+    "suv": "SUVs",
+    "sort": "Sort",
+    "priceAsc": "Price: Low to High",
+    "priceDesc": "Price: High to Low",
+    "nameAsc": "Name: A-Z",
+    "found": "Found",
+    "cars": "cars",
+    "notFound": "Car not found",
+    "notFoundDesc": "Try changing your search parameters",
+    "reset": "Reset filters",
+    "priceRange": "Price per day",
+    "from": "from",
+    "to": "to",
+    "perDay": "₽/day"
+  },
+  "car": {
+    "back": "← Back",
+    "from": "from",
+    "perDay": "₽/day",
+    "specs": "Specifications",
+    "power": "Power",
+    "acceleration": "0-100 km/h",
+    "engine": "Engine Volume",
+    "fuel": "Fuel Consumption",
+    "maxSpeed": "Max Speed",
+    "seats": "Seats",
+    "drive": "Drive",
+    "year": "Year",
+    "description": "Description",
+    "booking": "Book Now",
+    "whatsapp": "Message on WhatsApp",
+    "whatsappMessage": "Hello! I'm interested in renting"
+  },
+  "booking": {
+    "title": "Book This Car",
+    "name": "Your Name",
+    "phone": "Phone",
+    "dateStart": "Start Date",
+    "dateEnd": "End Date",
+    "comment": "Comment",
+    "agree": "I agree with the",
+    "privacy": "privacy policy",
+    "submit": "Submit Request",
+    "sending": "Sending...",
+    "total": "Total",
+    "days": "days",
+    "discount": "Discount",
+    "errors": {
+      "name": "Enter your name",
+      "phone": "Enter a valid phone number",
+      "dateStart": "Select a start date",
+      "dateEnd": "Select an end date",
+      "agree": "Agreement is required"
+    }
+  },
+  "success": {
+    "title": "Thank You!",
+    "message": "Your request has been sent. We will contact you shortly.",
+    "back": "Back to catalog"
+  },
+  "about": {
+    "title": "About Grand Motors",
+    "description": "Grand Motors is a premium car rental service. We offer an exclusive collection of supercars, luxury sedans, and SUVs for those who value comfort, style, and speed.",
+    "description2": "Our mission is to make dreams accessible. Every car in our fleet undergoes thorough inspection and preparation before each rental.",
+    "stats": "Our Achievements",
+    "team": "Our Team",
+    "reviews": "Client Reviews",
+    "cta": "Ready for an unforgettable experience?",
+    "ctaDesc": "Choose your dream car and book it right now",
+    "ctaButton": "Choose a Car",
+    "statsItems": [
+      { "value": "500+", "label": "Successful Rentals" },
+      { "value": "20", "label": "Cars in Fleet" },
+      { "value": "5+", "label": "Years on Market" },
+      { "value": "98%", "label": "Satisfied Clients" }
+    ],
+    "teamMembers": [
+      { "name": "Ramzan Dudaev", "role": "Founder & CEO", "description": "15 years of experience in the automotive business. Built Grand Motors from scratch into a premium service." },
+      { "name": "Magomed Isaev", "role": "Customer Service Director", "description": "Ensures a flawless experience for every client. Built the 24/7 support system." },
+      { "name": "Ruslan Khasanov", "role": "Head Mechanic", "description": "Certified Ferrari and Lamborghini specialist. Every car passes through his hands." }
+    ],
+    "reviewItems": [
+      { "name": "Alexander K.", "car": "Ferrari SF90", "text": "Incredible experience! The car is a rocket. Service at the highest level.", "rating": 5 },
+      { "name": "Maria S.", "car": "Rolls-Royce Ghost", "text": "Rented for our wedding. Guests were amazed, and we felt like royalty.", "rating": 5 },
+      { "name": "Dmitry P.", "car": "Lamborghini Huracán", "text": "Always dreamed of driving one. Grand Motors made it possible!", "rating": 5 },
+      { "name": "Elena V.", "car": "Mercedes-Maybach S 680", "text": "Stunning comfort. Used it for business meetings — partners were impressed.", "rating": 5 },
+      { "name": "Artem N.", "car": "Porsche 911 Turbo S", "text": "Took it for a weekend trip. An unforgettable experience!", "rating": 4 },
+      { "name": "Olga R.", "car": "Bentley Flying Spur", "text": "Luxury in every detail. Excellent condition of the car.", "rating": 5 },
+      { "name": "Sergey L.", "car": "Lamborghini Urus", "text": "Powerful and comfortable SUV. The family loved the ride.", "rating": 5 },
+      { "name": "Anna M.", "car": "Ferrari Roma", "text": "An elegant car for an elegant evening. Highly recommend!", "rating": 5 },
+      { "name": "Pavel D.", "car": "McLaren 720S", "text": "Out-of-this-world acceleration. Best birthday ever!", "rating": 5 },
+      { "name": "Natalia K.", "car": "Audi A8 L", "text": "Comfortable, quiet, smooth. Perfect for long trips.", "rating": 4 },
+      { "name": "Igor B.", "car": "Porsche Panamera", "text": "Sporty and comfortable at the same time. Amazing car!", "rating": 5 },
+      { "name": "Victoria T.", "car": "Range Rover SV", "text": "Premium in everything — from the interior to the road. Magnificent!", "rating": 5 }
+    ]
+  },
+  "whyUs": [
+    { "title": "No Deposit", "desc": "Rent without frozen funds — we trust our clients" },
+    { "title": "Insurance Included", "desc": "Full comprehensive and liability insurance included, no extra charges" },
+    { "title": "Delivery in 2 Hours", "desc": "We deliver the car anywhere in the city within 2 hours of confirmation" },
+    { "title": "Personal Manager 24/7", "desc": "Your dedicated manager is always available — day and night" },
+    { "title": "Cleaning & Detailing", "desc": "Every car undergoes professional wash and detailing before delivery" }
+  ],
+  "faq": [
+    { "q": "How do I book a car?", "a": "Choose a car, select dates, and submit a request. A manager will contact you within 15 minutes." },
+    { "q": "What documents are needed?", "a": "Passport and driving license. We take care of everything else." },
+    { "q": "How does the car handover work?", "a": "We deliver the car wherever you say. Together we inspect the car, sign the documents, and hand over the keys." },
+    { "q": "What is the minimum age to rent?", "a": "From 21 years old with at least 2 years of driving experience." },
+    { "q": "Do you accept card payments?", "a": "Any convenient method: cash, card, or cryptocurrency." },
+    { "q": "Can I cancel a booking?", "a": "Of course. If your plans change, contact us 24 hours before the scheduled delivery. We'll cancel with no penalties or questions." }
+  ],
+  "footer": {
+    "description": "Premium supercar and luxury car rental",
+    "navigation": "Navigation",
+    "contacts": "Contacts",
+    "privacy": "Privacy Policy",
+    "rights": "All rights reserved"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: April 2026",
+    "sections": [
+      { "title": "1. General Provisions", "text": "This Privacy Policy defines the procedure for processing and protecting personal data of Grand Motors website users. By using the website, you agree to the terms of this policy." },
+      { "title": "2. Information Collection", "text": "We collect information that you provide when filling out the booking form: name, phone number, rental dates, and comments. This information is used solely to process your request." },
+      { "title": "3. Data Usage", "text": "Collected data is used for: processing rental requests, contacting clients, and improving service quality. We do not share your data with third parties without your consent." },
+      { "title": "4. Data Protection", "text": "We use modern information security methods to prevent unauthorized access, modification, or destruction of personal data." },
+      { "title": "5. Cookies", "text": "The website may use cookies to improve user experience. You can disable cookies in your browser settings." },
+      { "title": "6. Contacts", "text": "For questions related to personal data processing, you can contact us via the email address listed in the contacts section." }
+    ]
+  },
+  "notFound": {
+    "title": "404",
+    "subtitle": "Page Not Found",
+    "description": "Looks like you took a wrong turn. Even our supercars can't find this page.",
+    "back": "Go Home"
+  }
+}

@@ -1,95 +1,107 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
 
-export default function Home() {
+import Hero from "@/components/Hero";
+import SectionDivider from "@/components/SectionDivider";
+import CarCard from "@/components/CarCard";
+import WhyUsItem from "@/components/WhyUsItem";
+import FAQItem from "@/components/FAQItem";
+import ScrollReveal from "@/components/ScrollReveal";
+import HomeButtons from "@/components/client/HomeButtons";
+import { useTheme } from "@/components/ThemeProvider";
+import { cars } from "@/constants/cars";
+
+export default function HomePage() {
+  const { theme, t } = useTheme();
+
+  const isDark = theme === "dark";
+  const textColor = isDark ? "#FFFFFF" : "#111111";
+  const grayColor = isDark ? "#A0A0A0" : "#666666";
+  const featuredCars = cars.slice(0, 4);
+
+  const whyUsItems: { title: string; desc: string }[] = (() => {
+    try {
+      const raw = t("whyUs");
+      if (Array.isArray(raw)) return raw;
+    } catch { /* fallback */ }
+    return [];
+  })();
+
+  const faqItems: { q: string; a: string }[] = (() => {
+    try {
+      const raw = t("faq");
+      if (Array.isArray(raw)) return raw;
+    } catch { /* fallback */ }
+    return [];
+  })();
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Hero />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <SectionDivider />
+
+      <ScrollReveal>
+        <section style={{ maxWidth: "1280px", margin: "0 auto", padding: "100px 40px" }} className="home-section">
+          <h2 style={{ fontFamily: "Raleway, sans-serif", fontSize: "28px", fontWeight: 700, color: textColor, textAlign: "center", marginBottom: "8px" }}>
+            {t("home.ourCars")}
+          </h2>
+          <p style={{ fontFamily: "Inter, sans-serif", fontSize: "14px", color: grayColor, textAlign: "center", marginBottom: "40px" }}>
+            {t("home.ourCarsDesc")}
+          </p>
+
+          <div className="home-cars-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "24px" }}>
+            {featuredCars.map((car) => (
+              <CarCard key={car.slug} car={car} />
+            ))}
+          </div>
+
+          <HomeButtons />
+        </section>
+      </ScrollReveal>
+
+      <SectionDivider />
+
+      <ScrollReveal delay={200}>
+        <section style={{ maxWidth: "1280px", margin: "0 auto", padding: "100px 40px" }} className="home-section">
+          <h2 style={{ fontFamily: "Raleway, sans-serif", fontSize: "28px", fontWeight: 700, color: textColor, textAlign: "center", marginBottom: "40px" }}>
+            {t("home.whyUs")}
+          </h2>
+
+          <div className="whyus-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px" }}>
+            {whyUsItems.slice(0, 3).map((item, i) => (
+              <WhyUsItem key={i} title={item.title} desc={item.desc} theme={theme} />
+            ))}
+          </div>
+          <div className="whyus-grid-bottom" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "20px", marginTop: "20px", maxWidth: "66.66%", margin: "20px auto 0" }}>
+            {whyUsItems.slice(3, 5).map((item, i) => (
+              <WhyUsItem key={i + 3} title={item.title} desc={item.desc} theme={theme} />
+            ))}
+          </div>
+        </section>
+      </ScrollReveal>
+
+      <SectionDivider />
+
+      <ScrollReveal delay={200}>
+        <section style={{ maxWidth: "800px", margin: "0 auto", padding: "100px 40px" }} className="home-section">
+          <h2 style={{ fontFamily: "Raleway, sans-serif", fontSize: "28px", fontWeight: 700, color: textColor, textAlign: "center", marginBottom: "40px" }}>
+            {t("home.faq")}
+          </h2>
+
+          {faqItems.map((item, i) => (
+            <FAQItem key={i} question={item.q} answer={item.a} theme={theme} />
+          ))}
+        </section>
+      </ScrollReveal>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .home-section { padding: 60px 20px !important; }
+          .home-cars-grid { grid-template-columns: 1fr !important; }
+          .whyus-grid { grid-template-columns: 1fr !important; }
+          .whyus-grid-bottom { grid-template-columns: 1fr !important; max-width: 100% !important; }
+        }
+      `}</style>
+    </>
   );
 }
